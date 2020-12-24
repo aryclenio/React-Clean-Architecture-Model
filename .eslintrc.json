@@ -1,7 +1,8 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "jest": true
   },
   "extends": [
     "plugin:react/recommended",
@@ -23,6 +24,9 @@
     "prettier"
     ],
   "rules": {
+    "no-empty-function":"off",
+    "no-useless-constructor": "off",
+    "max-classes-per-file": ["error", 10],
     "no-unused-vars": "off",
     "prettier/prettier": "error",
     "@typescript-eslint/consistent-type-definitions": "off",
