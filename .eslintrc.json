@@ -26,9 +26,11 @@
   "rules": {
     "no-empty-function":"off",
     "no-useless-constructor": "off",
+    "class-methods-use-this": "off",
     "max-classes-per-file": ["error", 10],
     "no-unused-vars": "off",
     "prettier/prettier": "error",
+    "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/consistent-type-definitions": "off",
     "@typescript-eslint/strinc-boolean-expressions": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
