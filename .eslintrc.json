@@ -35,6 +35,8 @@
     "@typescript-eslint/strinc-boolean-expressions": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
     "import/prefer-default-export": "off",
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
     "import/extensions": [
       "error",
       "ignorePackages",
@@ -45,6 +47,9 @@
     ]
   },
   "settings": {
+    "react": {
+      "version": "detect"
+    },
     "import/resolver": {
       "typescript": {}
     }
