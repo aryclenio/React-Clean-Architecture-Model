@@ -11,7 +11,7 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js', 'scss'],
     alias: {
-      '@': path.join(_dirname, 'src'),
+      '@': path.join(__dirname, 'src'),
     },
   },
   module: {
@@ -43,7 +43,7 @@ module.exports = {
   },
   devServer: {
     contentBase: './public',
-    writeToDisc: true,
+    writeToDisk: true,
     historyApiFallback: true,
   },
   externals: {

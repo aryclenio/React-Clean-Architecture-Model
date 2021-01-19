@@ -6,7 +6,7 @@
   "author": "Ary <aryclenio.barros@truckpad.com.br>",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --open",
+    "start": "webpack-cli serve --open --mode development",
     "test": "jest --passWithNoTests --no-cache --runInBand",
     "test:watch": "yarn test --watch",
     "test:staged": "yarn test --findRelatedTests",
