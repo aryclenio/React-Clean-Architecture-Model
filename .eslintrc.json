@@ -24,6 +24,7 @@
     "prettier"
     ],
   "rules": {
+    "react/jsx-props-no-spreading": "off",
     "no-unused-vars": "off",
     "no-empty-function":"off",
     "no-useless-constructor": "off",
