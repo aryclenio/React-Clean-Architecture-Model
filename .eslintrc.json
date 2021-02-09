@@ -20,13 +20,12 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint", 
-    "prettier"
-    ],
+  "plugins": ["react", "@typescript-eslint", "prettier"],
   "rules": {
     "react/jsx-props-no-spreading": "off",
+    "react/destructuring-assignment": "off",
     "no-unused-vars": "off",
-    "no-empty-function":"off",
+    "no-empty-function": "off",
     "no-useless-constructor": "off",
     "class-methods-use-this": "off",
     "max-classes-per-file": ["error", 10],
