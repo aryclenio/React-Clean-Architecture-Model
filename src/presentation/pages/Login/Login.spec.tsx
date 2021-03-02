@@ -6,21 +6,13 @@ import {
   RenderResult,
 } from '@testing-library/react';
 import Login from './Login';
-import { Validation } from '@/presentation/protocols/validation';
+import { ValidationSpy } from '@/presentation/test';
+import faker from 'faker';
 
 type SutTypes = {
   sut: RenderResult;
   validationSpy: ValidationSpy;
 };
-
-class ValidationSpy implements Validation {
-  errorMessage: string;
-  input: Record<string, unknown>;
-  validate(input: Record<string, unknown>): string {
-    this.input = input;
-    return this.errorMessage;
-  }
-}
 
 const makeSut = (): SutTypes => {
   const validationSpy = new ValidationSpy();
@@ -48,17 +40,15 @@ describe('Login Component', () => {
     const { sut, validationSpy } = makeSut();
     const emailInput = sut.getByTestId('email');
     fireEvent.input(emailInput, { target: { value: 'any_email' } });
-    expect(validationSpy.input).toEqual({
-      email: 'any_email',
-    });
+    expect(validationSpy.fieldName).toBe('email');
+    expect(validationSpy.fieldValue).toBe('any_email');
   });
 
   test('Should call validation with correct password', () => {
     const { sut, validationSpy } = makeSut();
     const passwordInput = sut.getByTestId('password');
     fireEvent.input(passwordInput, { target: { value: 'any_password' } });
-    expect(validationSpy.input).toEqual({
-      password: 'any_password',
-    });
+    expect(validationSpy.fieldName).toBe('password');
+    expect(validationSpy.fieldValue).toBe('any_password');
   });
 });
