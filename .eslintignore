@@ -5,3 +5,4 @@ prettier.config.js
 public
 webpack.config.js
 *.scss
+*.spec.tsx
